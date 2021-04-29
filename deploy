@@ -1,0 +1,8 @@
+-#!/bin/sh     
+ssh userName@development-server-ip <<EOF       
+ cd /your-project-path 
+ git pull      
+ npm install    
+ pm2 start app.js
+ exit      
+EOF
