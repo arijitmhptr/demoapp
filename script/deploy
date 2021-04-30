@@ -1,6 +1,6 @@
 #!/bin/sh
-ssh ubuntu@13.82.2.236 <<EOF
- cd /node-app
+ssh master@13.82.2.236 <<EOF
+ cd node-app/
  git pull
  npm install
  pm2 start app.js
