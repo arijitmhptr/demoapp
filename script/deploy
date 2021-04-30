@@ -1,6 +1,6 @@
 #!/bin/sh
 ssh ubuntu@13.82.2.236 <<EOF
-    cd ~/node-app
+    cd ~/demoapp
     git pull
     npm install
     npm install -g nodemon pm2
