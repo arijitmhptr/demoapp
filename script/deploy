@@ -1,6 +1,5 @@
 #!/bin/sh
-ssh ubuntu@13.82.2.236 <<EOF
- mkdir node-app
+# ssh ubuntu@13.82.2.236 <<EOF
  cd ~/node-app
  git pull
  npm install
