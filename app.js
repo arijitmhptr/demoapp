@@ -6,3 +6,5 @@ app.get('/api', (req, res) => {
 })
 
 app.listen(3500, () => console.log('Server running on Port:3500'));
+
+module.exports = app
