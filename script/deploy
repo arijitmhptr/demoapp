@@ -2,7 +2,7 @@
 ssh ubuntu@13.82.2.236 <<EOF
     git clone https://github.com/arijitmhptr/demoapp.git
     cd ~/demoapp
-    export PATH=/home/arijit/.nvm/versions/node/v14.15.0/bin/npm
+    export PATH=/home/arijit/.nvm/versions/node/v14.15.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/arijit/go/bin:/usr/local/go/bin:/home/arijit/go/bin:/home/arijit/fabric/bin
     npm install
     npm install -g nodemon pm2
     pm2 start app.js
