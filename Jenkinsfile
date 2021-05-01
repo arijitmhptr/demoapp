@@ -9,7 +9,7 @@ pipeline {
         stage('Git') {
             steps {
                 echo 'Clone the code'
-                git clone 'https://github.com/arijitmhptr/demoapp.git'
+                git 'https://github.com/arijitmhptr/demoapp'
             }
         }
 
