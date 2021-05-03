@@ -7,10 +7,7 @@ pipeline {
     stages {
 
         stage('Git') {
-            steps {
-                echo 'Clone the code'
                 git 'https://github.com/arijitmhptr/demoapp'
-            }
         }
 
         stage('Build') {
