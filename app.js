@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Hello Node');
 })
 
-app.listen(3500, () => console.log('Server running on Port:3500'));
+app.listen(3000, () => console.log('Server running on Port:3000'));
 
 module.exports = app
