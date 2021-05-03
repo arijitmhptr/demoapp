@@ -1,9 +1,0 @@
-#!/bin/sh
-ssh ubuntu@13.82.2.236 <<EOF
-    git clone https://github.com/arijitmhptr/demoapp.git
-    cd ~/demoapp
-    npm install
-    npm install -g nodemon pm2
-    pm2 start app.js
-    exit
-EOF
