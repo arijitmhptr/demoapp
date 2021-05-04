@@ -1,0 +1,32 @@
+node {
+
+   def commit_id
+
+    stage('Checkout'){
+          checkout scm
+    }
+
+   stage('test') {
+     nodejs(nodeJSInstallationName: 'nodejs') {
+       sh 'npm install --only=dev'
+       sh 'npm test'
+     }
+   }
+
+    stage('Cleanup'){
+        nodejs(nodeJSInstallationName: 'nodejs') {
+         echo 'prune and cleanup'
+         sh 'npm prune'
+         sh 'rm node_modules -rf'
+
+        }
+       }
+
+    stage('build'){
+        nodejs(nodeJSInstallationName: 'nodejs') {
+         echo 'build'
+         sh './script/deploy.sh'
+        }
+       }
+       
+}
